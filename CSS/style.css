@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f5f1;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #9b6b43;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a:hover {
+    color: #9b6b43;
+}
+
+.hero {
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg, rgba(255,255,255,.95), rgba(255,255,255,.25)),
+        url("images/hero.jpg") center/cover no-repeat;
+}
+
+.hero-content {
+    padding: 80px 0;
+}
+
+.small-title {
+    letter-spacing: 3px;
+    color: #9b6b43;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 52px;
+    margin: 15px 0;
+    line-height: 1.1;
+}
+
+.hero p {
+    max-width: 520px;
+    margin-bottom: 25px;
+}
+
+.btn,
+.btn-small {
+    display: inline-block;
+    background: #9b6b43;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn:hover,
+.btn-small:hover {
+    background: #765033;
+}
+
+.section {
+    padding: 55px 0;
+}
+
+.section h2 {
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0,0,0,.08);
+}
+
+.product-card img,
+.no-image {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.no-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ddd;
+    color: #777;
+}
+
+.product-info {
+    padding: 18px;
+}
+
+.product-info h3 {
+    margin: 8px 0;
+}
+
+.price {
+    color: #9b6b43;
+    font-weight: bold;
+    margin: 10px 0 15px;
+}
+
+.big {
+    font-size: 25px;
+}
+
+.category {
+    color: #777;
+    font-size: 14px;
+}
+
+.form-box {
+    width: 90%;
+    max-width: 500px;
+    margin: 60px auto;
+    background: white;
+    padding: 30px;
+    box-shadow: 0 3px 15px rgba(0,0,0,.08);
+    border-radius: 8px;
+}
+
+.form-box.large {
+    max-width: 700px;
+}
+
+.form-box h2 {
+    margin-bottom: 20px;
+}
+
+.form-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.message {
+    background: #eee1d7;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.category-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.category-list div {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+
+.detail {
+    padding: 60px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.detail-image img,
+.detail-image .no-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.detail-info {
+    padding-top: 20px;
+}
+
+.detail-info h1 {
+    font-size: 40px;
+    margin: 12px 0;
+}
+
+.detail-info p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.footer {
+    margin-top: 50px;
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+@media (max-width: 800px) {
+    .nav {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .detail {
+        grid-template-columns: 1fr;
+    }
+
+    .category-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 500px) {
+    .product-grid,
+    .category-list {
+        grid-template-columns: 1fr;
+    }
+}
