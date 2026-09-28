@@ -35,7 +35,11 @@ require_once "header.php";
             <p><strong>Available Quantity:</strong> <?php echo $product['quantity']; ?></p>
             <p><strong>Seller:</strong> <?php echo ($product['seller']); ?></p>
             <p><?php echo nl2br(($product['description'])); ?></p>
-            <button class="btn" onclick="alert('Order feature can be added next.')">Order Now</button>
+            <a
+    href="order.php?slug=<?php echo urlencode($product['slug']); ?>"
+    class="btn">
+    Order Now
+</a>
         </div>
 
     <?php else: ?>
